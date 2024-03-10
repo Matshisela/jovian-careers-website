@@ -16,23 +16,28 @@
   </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class = "img-fluid" id = "banner" src="/static/banner.jpg", height ="320" >
     <div class = "container">
       <h1 class= "text-center mt-2 mb-4"> Jovian Careers</h1>
-      <img class = "img-fluid" id = "banner" src="/static/banner.jpg", height ="320" >
       <h2 class = "text-center mt-2 mb-4">About Jovian </h2>
-      <p class="lead">
+      <div class = "row" style="margin-bottom:16px">
+      <div class = "col-6>
+        <p class="lead">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra sit amet aliquam id diam maecenas ultricies. Mauris augue neque gravida in fermentum et sollicitudin ac. Dui vivamus arcu felis bibendum ut. Quis vel eros donec ac odio tempor orci dapibus. Tellus in metus vulputate eu scelerisque felis imperdiet proin. Habitant morbi tristique senectus et. Risus pretium quam vulputate dignissim. Pulvinar mattis nunc sed blandit libero volutpat. Facilisis volutpat est velit egestas dui id ornare arcu odio. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Pellentesque habitant morbi tristique senectus. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Aenean sed adipiscing diam donec adipiscing tristique risus. Aliquam faucibus purus in massa tempor nec feugiat nisl pretium. Eu augue ut lectus arcu bibendum at varius. Non quam lacus suspendisse faucibus interdum posuere lorem. Sit amet consectetur adipiscing elit. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis.
       </p>
+      </div>
       <h2 class = "text-center mt-2 mb-4"">Open Positions</h2>
+      
       <p class="bodytext">
         {% for job in jobs %}
          {% include 'jobitem.html' %}
         {% endfor %}  
       </p>
       <div class = "text-center">
-        <button class = "btn btn-primary btn-lg">Contact Us</button>
-          <p class = "mt-4"">Copyright 2024, Jovian</p>
+        <a href = "mailto:info@ubuntuinsights.com?body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0AMy%20question%3A%20%3Cinformation%20question%20here%3E" class = "btn btn-primary btn-lg">Contact Us</a>
       </div>
   </div>
+    {% include 'footer.html' %}
   </body>
 </html>
